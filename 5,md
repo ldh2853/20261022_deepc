@@ -1,0 +1,35 @@
+5. 이 파일을 읽고 개인 평균, 과목 평균을 출력해 줘
+
+```
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+
+ 
+
+struct S {
+
+int k, e, m;
+
+};
+
+ 
+
+void main() {
+
+struct S a[2];
+
+FILE *p = fopen("my.bin", "rb");
+
+fread(a, sizeof(struct S), 2, p);
+
+fclose(p);
+
+ 
+
+printf("개인1: %.2f, 개인2: %.2f\n", (a[0].k + a[0].e + a[0].m) / 3.0, (a[1].k + a[1].e + a[1].m) / 3.0);
+
+printf("과목1: %.2f, 과목2: %.2f, 과목3: %.2f\n", (a[0].k + a[1].k) / 2.0, (a[0].e + a[1].e) / 2.0, (a[0].m + a[1].m) / 2.0);
+
+}
+```
