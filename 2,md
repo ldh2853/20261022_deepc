@@ -1,0 +1,25 @@
+2.함수의 포인터 
+
+```
+#include <stdio.h>
+
+ 
+
+int add(int a, int b) {
+
+return a + b;
+
+}
+
+ 
+
+void main() {
+
+int a = 11, b = 22;
+
+int (*sum)(int, int) = add;
+
+printf("%d\n", sum(a, b));
+
+}
+```
