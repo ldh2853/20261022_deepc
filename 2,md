@@ -22,5 +22,4 @@ int (*sum)(int, int) = add;
 printf("%d\n", sum(a, b));
 
 }
-
 ```
